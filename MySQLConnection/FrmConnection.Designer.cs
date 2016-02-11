@@ -60,7 +60,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "FrmConnection";
-            this.Text = "FrmConnection";
+            this.Text = "MySQL Connection";
             this.ResumeLayout(false);
 
         }
