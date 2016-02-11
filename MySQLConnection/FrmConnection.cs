@@ -26,7 +26,12 @@ namespace MySQLConnection
                 try
                 {
                     con.Open();
-                    label1.Text = "Connection Established!";
+                    string query = "SELECT VERSION()";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    string version = Convert.ToString(cmd.ExecuteScalar());
+                    //Console.WriteLine("MySQL version : {0}", version);
+                    label1.Text = "Connection Established!\n" + "MySQL Version: " + version;
+
                 }
                 catch (Exception ex)
                 {
