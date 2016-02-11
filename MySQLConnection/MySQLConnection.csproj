@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon_Gus_icon.ico</ApplicationIcon>
+    <ApplicationIcon>Icon-Ali.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mysql.data">
@@ -89,7 +89,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon_Gus_icon.ico" />
     <Content Include="FodyWeavers.xml" />
     <Content Include="Icon-Ali.ico" />
   </ItemGroup>
