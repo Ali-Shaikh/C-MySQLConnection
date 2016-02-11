@@ -21,16 +21,20 @@ namespace MySQLConnection
         string connectionString = "host=192.168.0.91; database=c#1; user=test1; password=test1";
         private void button1_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection con= new MySqlConnection(connectionString))
+            using (MySqlConnection con = new MySqlConnection(connectionString))
             {
-                con.Open();
-                if(con.State==ConnectionState.Open)
+                try
                 {
+                    con.Open();
                     label1.Text = "Connection Established!";
                 }
-                else
+                catch (Exception ex)
                 {
-                    label1.Text = "Connection Error!";
+                    label1.Text = "Connection Error!\n" + ex.Message;
+                }
+                finally
+                {
+                    con.Close();
                 }
             }
         }
