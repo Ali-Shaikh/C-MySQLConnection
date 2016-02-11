@@ -32,10 +32,12 @@ namespace MySQLConnection
                 {
                     label1.Text = "Connection Error!\n" + ex.Message;
                 }
-                finally
-                {
-                    con.Close();
-                }
+                //I am using 'using', so wouldn't need the finally block, for the using function 
+                //will close the connection automatically.
+                //finally
+                //{
+                //    con.close();
+                //}
             }
         }
     }
